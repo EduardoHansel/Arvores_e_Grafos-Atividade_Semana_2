@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
 
 int comparacoes = 0, trocas = 0;
@@ -100,8 +99,6 @@ int main() {
 };
     // Arrays invertidos
     int arr4[10], arr5[100], arr6[1000];
-
-    srand(time(NULL));
 
     // Preenchendo os arrays de forma invertida
     for (int i = 1; i <= 10; i++) {arr4[10 - i] = i;}
