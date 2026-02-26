@@ -125,6 +125,9 @@ int main() {
     printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
 
+    trocas = 0;
+    comparacoes = 0;
+
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array aleatório com 100 números:\n");
     exibirArray(arr2, 100);
@@ -136,6 +139,9 @@ int main() {
     exibirArray(arr2, 100);
     printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array aleatório com 1000 números:\n");
@@ -149,6 +155,9 @@ int main() {
     printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
 
+    trocas = 0;
+    comparacoes = 0;
+
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array invertido com 10 números:\n");
     exibirArray(arr4, 10);
@@ -161,6 +170,9 @@ int main() {
     printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
 
+    trocas = 0;
+    comparacoes = 0;
+
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array invertido com 100 números:\n");
     exibirArray(arr5, 100);
@@ -172,6 +184,9 @@ int main() {
     exibirArray(arr5, 100);
     printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array invertido com 1000 números:\n");

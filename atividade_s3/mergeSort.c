@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int movimentacoes = 0;
+int trocas = 0;
 int comparacoes = 0;
 
 void exibirArray(int arr[], int n) {
@@ -19,11 +19,11 @@ void merge(int arr[], int l, int m, int r) {
 
     for (int i = 0; i < n1; i++)
         L[i] = arr[l + i];
-        movimentacoes++;
+        trocas++;
 
     for (int j = 0; j < n2; j++)
         R[j] = arr[m + 1 + j];
-        movimentacoes++;
+        trocas++;
 
 
     int i = 0, j = 0, k = l;
@@ -37,7 +37,7 @@ void merge(int arr[], int l, int m, int r) {
             arr[k] = R[j];
             j++;
         }
-        movimentacoes++;
+        trocas++;
         k++;
     }
 
@@ -147,8 +147,11 @@ int main() {
     double tempo_ms = (double)(fim - inicio) * 1000 / CLOCKS_PER_SEC;
     printf("Array ordenado:\n");
     exibirArray(arr1, 10);
-    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, movimentacoes, comparacoes);
+    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array aleatório com 100 números:\n");
@@ -159,8 +162,11 @@ int main() {
     tempo_ms = (double)(fim - inicio) * 1000 / CLOCKS_PER_SEC;
     printf("Array ordenado:\n");
     exibirArray(arr2, 100);
-    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, movimentacoes, comparacoes);
+    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array aleatório com 1000 números:\n");
@@ -171,8 +177,11 @@ int main() {
     tempo_ms = (double)(fim - inicio) * 1000 / CLOCKS_PER_SEC;
     printf("Array ordenado:\n");
     exibirArray(arr3, 1000);
-    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, movimentacoes, comparacoes);
+    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array invertido com 10 números:\n");
@@ -183,8 +192,11 @@ int main() {
     tempo_ms = (double)(fim - inicio) * 1000 / CLOCKS_PER_SEC;
     printf("Array ordenado:\n");
     exibirArray(arr4, 10);
-    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, movimentacoes, comparacoes);
+    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array invertido com 100 números:\n");
@@ -195,8 +207,11 @@ int main() {
     tempo_ms = (double)(fim - inicio) * 1000 / CLOCKS_PER_SEC;
     printf("Array ordenado:\n");
     exibirArray(arr5, 100);
-    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, movimentacoes, comparacoes);
+    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
+
+    trocas = 0;
+    comparacoes = 0;
 
     printf("-----------------------------------------------------------------------------------------------------------\n");
     printf("Array invertido com 1000 números:\n");
@@ -207,6 +222,6 @@ int main() {
     tempo_ms = (double)(fim - inicio) * 1000 / CLOCKS_PER_SEC;
     printf("Array ordenado:\n");
     exibirArray(arr6, 1000);
-    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, movimentacoes, comparacoes);
+    printf("Tempo de execução: %.2f  -  Nº de trocas: %d  -  Nº de comparações: %d\n", tempo_ms, trocas, comparacoes);
     printf("-----------------------------------------------------------------------------------------------------------\n\n");
 }

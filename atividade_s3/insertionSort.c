@@ -5,6 +5,8 @@ int trocas = 0;
 int comparacoes = 0;
 
 void insertionSort(int arr[], int n) {
+    trocas = 0;
+    comparacoes = 0;
     int key, j;
     for (int i = 1; i < n; i++) {
         key = arr[i];
