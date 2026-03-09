@@ -12,3 +12,5 @@ add_executable(s3_quickSort atividade_s3/quickSort.c)
 add_executable(s3_selectionSort atividade_s3/selectionSort.c)
 
 add_executable(s4_maxHeap atividade_s4/max_heap.c)
+
+add_executable(s5_atividade atividade_s5/tarefa.c)
