@@ -86,8 +86,6 @@ void merge(int arr[], int l, int m, int r) {
 
     for (int j = 0; j < n2; j++)
         R[j] = arr[m + 1 + j];
-    trocas++;
-
 
     int i = 0, j = 0, k = l;
 
@@ -100,7 +98,6 @@ void merge(int arr[], int l, int m, int r) {
             arr[k] = R[j];
             j++;
         }
-        trocas++;
         k++;
     }
 
@@ -225,10 +222,12 @@ void heapSort(int vet[], int n) {
 int main() {
     clock_t inicio, fim;
     double tempo_s;
-    int arr[1001];
+    int arr[2000];
     int totalElementos = 0;
     int controle = -1;
     int totalValores = 0;
+
+    printf("O array já contém números múltiplos de 10 de 0 até 10000 para adicionar complexidade à execução dos algoritmos.\n\n");
 
     for (int i = 0; i <= 10000; i+=10) {
         arr[totalElementos++] = i;
@@ -247,6 +246,11 @@ int main() {
         scanf("%d", &controle);
 
         switch (controle) {
+
+            case 0:
+                printf("Programa Finalizado.\n");
+                break;
+
             case 1:
                 for (int i = 0; i < totalValores; i++) {
                     printf("\nDigite o valor: ");
@@ -260,7 +264,7 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Bubble Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (s): %.9f", trocas, comparacoes, tempo_s);
                 break;
 
             case 2:
@@ -276,7 +280,7 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Selection Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (s): %.9f", trocas, comparacoes, tempo_s);
                 break;
 
             case 3:
@@ -292,7 +296,7 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Insertion Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (s): %.9f", trocas, comparacoes, tempo_s);
                 break;
 
             case 4:
@@ -308,7 +312,7 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Quick Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (s): %.9f", trocas, comparacoes, tempo_s);
                 break;
 
             case 5:
@@ -324,7 +328,7 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Merge Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: N/A\nNº de comparações: %d\nTempo de execução (s): %.9f", comparacoes, tempo_s);
                 break;
 
             case 6:
@@ -340,7 +344,7 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Shell Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (s): %.9f", trocas, comparacoes, tempo_s);
                 break;
 
             case 7:
@@ -356,12 +360,15 @@ int main() {
                     exibirArray(arr, totalElementos);
                 }
                 printf("\nResultado Heap Sort:\n");
-                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (ms): %.9f", trocas, comparacoes, tempo_s);
+                printf("Nº de trocas: %d\nNº de comparações: %d\nTempo de execução (s): %.9f", trocas, comparacoes, tempo_s);
                 break;
 
             default:
-                printf("Opção inválida.");
+                printf("Opção inválida.\n");
         }
-        exibirArray(arr, totalElementos);
+        if (controle != 0) {
+            exibirArray(arr, totalElementos);
+            printf("\n");
+        }
     }
 }
