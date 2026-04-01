@@ -1,0 +1,7 @@
+| [Falso] -> não necessariamente, pois se o conjunto for pequeno, pode acontecer da pesquisa sequencial encontrar um
+valor mais rapidamente.
+
+|| [Verdadeira] -> ela naturalmente varre o conjunto do início ao fim, logo o array pode estar em qualquer ordem.
+
+||| [Verdadeiro] -> ela não varre o conjunto do início ao fim como a busca sequencial, logo ela depende do conjunto
+estar ordenado para funcionar corretamente.

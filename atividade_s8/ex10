@@ -1,0 +1,8 @@
+Para a lista A, considerando o seu estado inicial, a pesquisa sequencial é a melhor opção para uma operação de
+busca, uma vez que ela é curta e está desordenada - a complexidade O(n) não é problemático para arrays curtos e
+a pesquisa binária só funciona em arrays ordenados, sendo assim, esse array precisaria do auxílio de um algoritmo
+de ordenação para que a pesquisa binária possa ser aplicada nele.
+
+Para a lista B, a melhor opção para uma operação de busca é a pesquisa binária, dado que ela possui um milhão de
+elementos e a complexidade O(log n) torna a pesquisa binária muito mais apropriada do que a sequencial, que possui
+complexidade O(n) e, consequentemente, apresentaria uma performance muito inferior para uma busca nesse array.

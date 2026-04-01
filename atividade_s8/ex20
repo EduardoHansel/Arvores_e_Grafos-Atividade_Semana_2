@@ -1,0 +1,11 @@
+Manter os dados desordenados e utilizar pesquisa sequencial não seria uma boa escolha, uma vez que o conjunto de
+dados cresce constantemente e inevitavelmente ficará grande demais para milhares de buscas por segundo,
+considerando a complexidade O(n) da pesquisa sequencial. Apesar da inserção - apenas no final - não ser um grande
+problema, a performance de busca é o suficiente para eliminar essa opção.
+
+Dito isso, a pesquisa binária é a melhor opção para esse cenário, mesmo que haja a necessidade de um algoritmo de
+ordenação. Nesse sentindo, sobre o algoritmo de ordenação, como os conjunto de dados está em crescimento constante
+e as inserções ocorrem de forma aleatória, pode-se usar tanto o merge sort e o heap sort, já qua a complexidade de
+é O(n log n) em todos os casos (se os dados fossem sempre inseridos ao fim o algoritmo de ordenção indicado seria
+o insertion sort). Sobre a pesquisa em si, a binária é muito mais eficiente que a sequencial em grandes conjuntos
+de dados em função de sua complexidade que é O(log n).

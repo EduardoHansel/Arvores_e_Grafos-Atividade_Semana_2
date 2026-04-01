@@ -1,0 +1,7 @@
+Dado o tamanho do conjunto de dados e a necessidade de rapidez nas operações de busca, a melhor opção é a busca
+binária, uma vez que sua complexidade é O(log n), que é bem melhor em conjuntos grandes do que a busca sequencial, de
+complexidade O(n). Para a ordenação do conjunto, se os dados forem sempre inseridos ao final do conjunto, eu adotaria
+a seguinte abordagem - ordenação inicial completa do conjunto (mesmo que o custo disso seja alto) para uso posterior
+do insertion sort, que funciona faz a inserção do novo elemento diretamente em sua posição correta. Se a lógica de
+inserção for diferente, algoritmos decomplexidade O(n log n) como merge e heap sort dão conta do recado com uma boa
+performance.
